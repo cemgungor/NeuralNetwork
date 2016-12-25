@@ -6,7 +6,7 @@ class NeuralNetwork:
     def __init__(self, trainingDataCount, testDataCount, hiddenLayerCount, hlNodeCount, batchSize, learningRate ,maxIteration):
 
         print("--Reading Data")
-        training_data, validation_data, test_data = mnist_loader.load_data_wrapper()
+        training_data, test_data = mnist_loader.load_data_wrapper()
 
         self.inputs = training_data[0][0]
         for i in range(trainingDataCount - 1):
